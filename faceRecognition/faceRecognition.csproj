@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{31779D25-3A4E-46C7-898B-D5B90B5F15B3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>faceRecognition</RootNamespace>
+    <AssemblyName>faceRecognition</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="python\trainer\trainer.yml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="python\1dataset.py" />
+    <Content Include="python\2training.py" />
+    <Content Include="python\3recognition.py" />
+    <Content Include="python\dataset\Usuario.1.1.jpg" />
+    <Content Include="python\dataset\Usuario.1.10.jpg" />
+    <Content Include="python\dataset\Usuario.1.11.jpg" />
+    <Content Include="python\dataset\Usuario.1.12.jpg" />
+    <Content Include="python\dataset\Usuario.1.13.jpg" />
+    <Content Include="python\dataset\Usuario.1.14.jpg" />
+    <Content Include="python\dataset\Usuario.1.15.jpg" />
+    <Content Include="python\dataset\Usuario.1.16.jpg" />
+    <Content Include="python\dataset\Usuario.1.17.jpg" />
+    <Content Include="python\dataset\Usuario.1.18.jpg" />
+    <Content Include="python\dataset\Usuario.1.19.jpg" />
+    <Content Include="python\dataset\Usuario.1.2.jpg" />
+    <Content Include="python\dataset\Usuario.1.20.jpg" />
+    <Content Include="python\dataset\Usuario.1.21.jpg" />
+    <Content Include="python\dataset\Usuario.1.22.jpg" />
+    <Content Include="python\dataset\Usuario.1.23.jpg" />
+    <Content Include="python\dataset\Usuario.1.24.jpg" />
+    <Content Include="python\dataset\Usuario.1.25.jpg" />
+    <Content Include="python\dataset\Usuario.1.26.jpg" />
+    <Content Include="python\dataset\Usuario.1.27.jpg" />
+    <Content Include="python\dataset\Usuario.1.28.jpg" />
+    <Content Include="python\dataset\Usuario.1.29.jpg" />
+    <Content Include="python\dataset\Usuario.1.3.jpg" />
+    <Content Include="python\dataset\Usuario.1.30.jpg" />
+    <Content Include="python\dataset\Usuario.1.4.jpg" />
+    <Content Include="python\dataset\Usuario.1.5.jpg" />
+    <Content Include="python\dataset\Usuario.1.6.jpg" />
+    <Content Include="python\dataset\Usuario.1.7.jpg" />
+    <Content Include="python\dataset\Usuario.1.8.jpg" />
+    <Content Include="python\dataset\Usuario.1.9.jpg" />
+    <Content Include="python\dataset\Usuario.2.1.jpg" />
+    <Content Include="python\dataset\Usuario.2.10.jpg" />
+    <Content Include="python\dataset\Usuario.2.11.jpg" />
+    <Content Include="python\dataset\Usuario.2.12.jpg" />
+    <Content Include="python\dataset\Usuario.2.13.jpg" />
+    <Content Include="python\dataset\Usuario.2.14.jpg" />
+    <Content Include="python\dataset\Usuario.2.15.jpg" />
+    <Content Include="python\dataset\Usuario.2.16.jpg" />
+    <Content Include="python\dataset\Usuario.2.17.jpg" />
+    <Content Include="python\dataset\Usuario.2.18.jpg" />
+    <Content Include="python\dataset\Usuario.2.19.jpg" />
+    <Content Include="python\dataset\Usuario.2.2.jpg" />
+    <Content Include="python\dataset\Usuario.2.20.jpg" />
+    <Content Include="python\dataset\Usuario.2.21.jpg" />
+    <Content Include="python\dataset\Usuario.2.22.jpg" />
+    <Content Include="python\dataset\Usuario.2.23.jpg" />
+    <Content Include="python\dataset\Usuario.2.24.jpg" />
+    <Content Include="python\dataset\Usuario.2.25.jpg" />
+    <Content Include="python\dataset\Usuario.2.26.jpg" />
+    <Content Include="python\dataset\Usuario.2.27.jpg" />
+    <Content Include="python\dataset\Usuario.2.28.jpg" />
+    <Content Include="python\dataset\Usuario.2.29.jpg" />
+    <Content Include="python\dataset\Usuario.2.3.jpg" />
+    <Content Include="python\dataset\Usuario.2.30.jpg" />
+    <Content Include="python\dataset\Usuario.2.4.jpg" />
+    <Content Include="python\dataset\Usuario.2.5.jpg" />
+    <Content Include="python\dataset\Usuario.2.6.jpg" />
+    <Content Include="python\dataset\Usuario.2.7.jpg" />
+    <Content Include="python\dataset\Usuario.2.8.jpg" />
+    <Content Include="python\dataset\Usuario.2.9.jpg" />
+    <Content Include="python\dataset\Usuario.3.1.jpg" />
+    <Content Include="python\dataset\Usuario.3.10.jpg" />
+    <Content Include="python\dataset\Usuario.3.11.jpg" />
+    <Content Include="python\dataset\Usuario.3.12.jpg" />
+    <Content Include="python\dataset\Usuario.3.13.jpg" />
+    <Content Include="python\dataset\Usuario.3.14.jpg" />
+    <Content Include="python\dataset\Usuario.3.15.jpg" />
+    <Content Include="python\dataset\Usuario.3.16.jpg" />
+    <Content Include="python\dataset\Usuario.3.17.jpg" />
+    <Content Include="python\dataset\Usuario.3.18.jpg" />
+    <Content Include="python\dataset\Usuario.3.19.jpg" />
+    <Content Include="python\dataset\Usuario.3.2.jpg" />
+    <Content Include="python\dataset\Usuario.3.20.jpg" />
+    <Content Include="python\dataset\Usuario.3.21.jpg" />
+    <Content Include="python\dataset\Usuario.3.22.jpg" />
+    <Content Include="python\dataset\Usuario.3.23.jpg" />
+    <Content Include="python\dataset\Usuario.3.24.jpg" />
+    <Content Include="python\dataset\Usuario.3.25.jpg" />
+    <Content Include="python\dataset\Usuario.3.26.jpg" />
+    <Content Include="python\dataset\Usuario.3.27.jpg" />
+    <Content Include="python\dataset\Usuario.3.28.jpg" />
+    <Content Include="python\dataset\Usuario.3.29.jpg" />
+    <Content Include="python\dataset\Usuario.3.3.jpg" />
+    <Content Include="python\dataset\Usuario.3.30.jpg" />
+    <Content Include="python\dataset\Usuario.3.4.jpg" />
+    <Content Include="python\dataset\Usuario.3.5.jpg" />
+    <Content Include="python\dataset\Usuario.3.6.jpg" />
+    <Content Include="python\dataset\Usuario.3.7.jpg" />
+    <Content Include="python\dataset\Usuario.3.8.jpg" />
+    <Content Include="python\dataset\Usuario.3.9.jpg" />
+    <Content Include="python\dataset\Usuario.4.1.jpg" />
+    <Content Include="python\dataset\Usuario.4.10.jpg" />
+    <Content Include="python\dataset\Usuario.4.11.jpg" />
+    <Content Include="python\dataset\Usuario.4.12.jpg" />
+    <Content Include="python\dataset\Usuario.4.13.jpg" />
+    <Content Include="python\dataset\Usuario.4.14.jpg" />
+    <Content Include="python\dataset\Usuario.4.15.jpg" />
+    <Content Include="python\dataset\Usuario.4.16.jpg" />
+    <Content Include="python\dataset\Usuario.4.17.jpg" />
+    <Content Include="python\dataset\Usuario.4.18.jpg" />
+    <Content Include="python\dataset\Usuario.4.19.jpg" />
+    <Content Include="python\dataset\Usuario.4.2.jpg" />
+    <Content Include="python\dataset\Usuario.4.20.jpg" />
+    <Content Include="python\dataset\Usuario.4.21.jpg" />
+    <Content Include="python\dataset\Usuario.4.22.jpg" />
+    <Content Include="python\dataset\Usuario.4.23.jpg" />
+    <Content Include="python\dataset\Usuario.4.24.jpg" />
+    <Content Include="python\dataset\Usuario.4.25.jpg" />
+    <Content Include="python\dataset\Usuario.4.26.jpg" />
+    <Content Include="python\dataset\Usuario.4.27.jpg" />
+    <Content Include="python\dataset\Usuario.4.28.jpg" />
+    <Content Include="python\dataset\Usuario.4.29.jpg" />
+    <Content Include="python\dataset\Usuario.4.3.jpg" />
+    <Content Include="python\dataset\Usuario.4.30.jpg" />
+    <Content Include="python\dataset\Usuario.4.4.jpg" />
+    <Content Include="python\dataset\Usuario.4.5.jpg" />
+    <Content Include="python\dataset\Usuario.4.6.jpg" />
+    <Content Include="python\dataset\Usuario.4.7.jpg" />
+    <Content Include="python\dataset\Usuario.4.8.jpg" />
+    <Content Include="python\dataset\Usuario.4.9.jpg" />
+    <Content Include="python\fareco.png" />
+    <Content Include="python\haarcascade_frontalface_default.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
